@@ -63,7 +63,7 @@ $dbh = null;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>supprimer une note - Résultat</title>
-    <link rel="stylesheet" href="../nginx/html/style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
