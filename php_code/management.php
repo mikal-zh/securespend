@@ -35,9 +35,9 @@ if (!in_array('role_admin', $roles)) {
 }
 
 $dbh = new PDO(
-    'mysql:host=' . getenv('DB_HOST') . ';dbname=' . getenv('DB_NAME') . ';port=' . getenv('DB_PORT') . ';charset=utf8mb4',
-    getenv('DB_USERNAME'),
-    getenv('DB_PASSWORD')
+    'mysql:host=' . $_ENV['DB_HOST'] . ';dbname=' . $_ENV['DB_NAME'] . ';port=' . $_ENV['DB_PORT'] . ';charset=utf8mb4',
+    $_ENV['DB_USERNAME'],
+    $_ENV['DB_PASSWORD']
 );
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $stmt = $dbh->query('SELECT * FROM note');

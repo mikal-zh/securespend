@@ -19,6 +19,7 @@ services:
             - securesnack
     db:    
         image: mariadb  
+        container_name: mariadb
         volumes: 
             - mysql-data:/var/lib/mysql
             - ./mysql/setup.sql:/docker-entrypoint-initdb.d/setup.sql
