@@ -30,7 +30,7 @@ $canValider = in_array('role_admin', $roles);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hall</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../nginx/html/style.css">
 </head>
 <body style="background-color:#0F172A;">
 

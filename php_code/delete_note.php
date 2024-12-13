@@ -1,4 +1,11 @@
 <?php
+require 'vendor/autoload.php';  // Assure-toi que ce chemin est correct
+
+use Dotenv\Dotenv;
+
+// Load .env file
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 session_start();
 
@@ -56,7 +63,7 @@ $dbh = null;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>supprimer une note - Résultat</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../nginx/html/style.css">
 
 </head>
 

@@ -8,31 +8,31 @@ services:
         depends_on:
             - php
         networks:
-            - securesnack
+            - securespend
     php:
         build: ./php_code/
         expose:
             - 9000
         depends_on:
-            - db
+            - mysqldb
         networks:
-            - securesnack
-    db:    
-        image: mariadb  
-        container_name: mariadb
+            - securespend
+    mysqldb:    
+        image: mysql
+        container_name: mysql
         volumes: 
             - mysql-data:/var/lib/mysql
-            - ./mysql/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+            - ./mysql/setup.sql:/docker-entrypoint-initdb.d/001-init.sql
         environment:  
-            MYSQL_ROOT_PASSWORD: mariadb
-            MYSQL_DATABASE: securesnack
+            MYSQL_ROOT_PASSWORD: secretpassword
+            MYSQL_DATABASE: securespend
             MYSQL_USER: admin_secure
             MYSQL_PASSWORD: g
         networks:
-            - securesnack
+            - securespend
 
 networks:
-    securesnack:
+    securespend:
         driver: bridge
 
 volumes:
