@@ -1,0 +1,40 @@
+services:
+    nginx:
+        build: ./nginx/
+        ports:
+        - 80:80
+        volumes:
+            - ./php_code/:/var/www/html/
+        depends_on:
+            - php
+        networks:
+            - securesnack
+    php:
+        build: ./php_code/
+        expose:
+            - 9000
+        volumes:
+            - ./php_code/:/var/www/html/
+        depends_on:
+            - db
+        networks:
+            - securesnack
+    db:    
+        image: mariadb  
+        volumes: 
+            - mysql-data:/var/lib/mysql
+            - ./mysql/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+        environment:  
+            - MYSQL_ROOT_PASSWORD: mariadb
+            - MYSQL_DATABASE: securesnack
+            - MYSQL_USER: admin_secure
+            - MYSQL_PASSWORD: g
+        networks:
+            - securesnack
+
+networks:
+    securesnack:
+        driver: bridge
+
+volumes:
+    mysql-data:

@@ -1,0 +1,14 @@
+# Enable the rewrite engine
+RewriteEngine On
+
+# Redirect all requests for .php files to the php_code subfolder
+RewriteCond %{REQUEST_URI} \.php$ [NC]
+RewriteRule ^(.*)$ /php_code/$1 [L]
+
+# Redirect all other requests to the nginx/html directory
+RewriteCond %{REQUEST_URI} !\.php$ [NC]
+RewriteRule ^(.*)$ /nginx/html/$1 [L]
+
+# Exclude existing files and directories from being rewritten
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
