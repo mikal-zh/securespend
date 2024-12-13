@@ -13,8 +13,6 @@ services:
         build: ./php_code/
         expose:
             - 9000
-        volumes:
-            - ./php_code/:/var/www/html/
         depends_on:
             - db
         networks:
@@ -25,10 +23,10 @@ services:
             - mysql-data:/var/lib/mysql
             - ./mysql/setup.sql:/docker-entrypoint-initdb.d/setup.sql
         environment:  
-            - MYSQL_ROOT_PASSWORD: mariadb
-            - MYSQL_DATABASE: securesnack
-            - MYSQL_USER: admin_secure
-            - MYSQL_PASSWORD: g
+            MYSQL_ROOT_PASSWORD: mariadb
+            MYSQL_DATABASE: securesnack
+            MYSQL_USER: admin_secure
+            MYSQL_PASSWORD: g
         networks:
             - securesnack
 
