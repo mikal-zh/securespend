@@ -1,4 +1,12 @@
 <?php
+require 'vendor/autoload.php';  // Assure-toi que ce chemin est correct
+
+use Dotenv\Dotenv;
+
+// Load .env file
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);

@@ -3,6 +3,7 @@
         "league/oauth2-client": "^2.7",
         "firebase/php-jwt": "^6.10",
         "guzzlehttp/guzzle": "^7.9",
-        "jumbojett/openid-connect-php": "^1.0"
+        "jumbojett/openid-connect-php": "^1.0",
+        "vlucas/phpdotenv": "^5.4"
     }
 }

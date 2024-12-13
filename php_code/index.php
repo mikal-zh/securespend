@@ -2,6 +2,11 @@
 require 'vendor/autoload.php';  // Assure-toi que ce chemin est correct
 
 use Jumbojett\OpenIDConnectClient;
+use Dotenv\Dotenv;
+
+// Load .env file
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 echo ("env var " . getenv('OIDC_ISSUER_KEYCLOAK') . "\n");
 
