@@ -3,6 +3,8 @@ require 'vendor/autoload.php';  // Assure-toi que ce chemin est correct
 
 use Jumbojett\OpenIDConnectClient;
 
+echo ("env var " . getenv('OIDC_ISSUER_KEYCLOAK') . "\n");
+
 $oidc = new OpenIDConnectClient(
     getenv('OIDC_ISSUER_KEYCLOAK'), // Remplace par ton domaine Keycloak et le nom de ton Realm
     getenv('OIDC_CLIENT_ID_KEYCLOAK'),  // Remplace par le Client ID que tu as créé
