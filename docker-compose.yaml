@@ -9,8 +9,6 @@ services:
             - securespend
     php:
         build: ./php_code/
-        expose:
-            - 9000
         depends_on:
             - mysqldb
         networks:
