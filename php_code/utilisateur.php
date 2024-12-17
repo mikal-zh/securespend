@@ -33,8 +33,8 @@ if (!in_array('role_user', $roles)) {
 }
 
 $dbh = new PDO(
-    'mysql:host=' . $_ENV['MYSQL_HOST'] . ';dbname=' . $_ENV['MYSQL_NAME'] . ';port=' . $_ENV['MYSQL_PORT'] . ';charset=utf8mb4',
-    $_ENV['MYSQL_USERNAME'],
+    'mysql:host=' . $_ENV['MYSQL_HOST'] . ';dbname=' . $_ENV['MYSQL_DATABASE'] . ';port=' . $_ENV['MYSQL_PORT'] . ';charset=utf8mb4',
+    $_ENV['MYSQL_USER'],
     $_ENV['MYSQL_PASSWORD']
 );
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

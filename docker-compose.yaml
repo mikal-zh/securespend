@@ -2,7 +2,7 @@ services:
     nginx:
         build: ./nginx/
         ports:
-        - 80:80
+            - 80:80
         depends_on:
             - php
         networks:
@@ -19,16 +19,16 @@ services:
             MYSQL_USER: admin_secure
             MYSQL_PASSWORD: g
             MYSQL_DATABASE: securespend
-            OIDC_ISSUER_URL: your-issuer-url
-            OIDC_CLIENT_ID: your-client-id
-            OIDC_CLIENT_SECRET: your-client-secret
-    mysqldb:    
+            OIDC_ISSUER_URL: https://ariovisdemo.cloud-iam.com/realms/securespend
+            OIDC_CLIENT_ID: securespend
+            OIDC_CLIENT_SECRET: lg9rprkpqRYsB2HMrAxyRGiCPl43XBnj
+    mysqldb:
         image: mysql
         container_name: mysql
-        volumes: 
+        volumes:
             - mysql-data:/var/lib/mysql
             - ./mysql/setup.sql:/docker-entrypoint-initdb.d/001-init.sql
-        environment:  
+        environment:
             MYSQL_ROOT_PASSWORD: secretpassword
             MYSQL_DATABASE: securespend
             MYSQL_USER: admin_secure

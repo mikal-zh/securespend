@@ -14,6 +14,7 @@ RUN apt update && apt install zip unzip
 
 # Pull dependency from composer.json
 RUN composer install
+RUN touch .env
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
