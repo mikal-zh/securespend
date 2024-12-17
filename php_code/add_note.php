@@ -18,7 +18,6 @@ function decodeJWT($jwt) {
 
 $decodedToken = decodeJWT($accessToken);
 $roles = isset($decodedToken['realm_access']['roles']) ? $decodedToken['realm_access']['roles'] : [];
-$user_id = $decodedArray['preferred_username'];
 
 if (!in_array('role_user', $roles)) {
     header('Location: hall.php');
