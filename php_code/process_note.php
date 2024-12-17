@@ -33,9 +33,9 @@ if (!in_array('role_user', $roles)) {
 
 try {
     $dbh = new PDO(
-        'mysql:host=' . $_ENV['DB_HOST'] . ';dbname=' . $_ENV['DB_NAME'] . ';port=' . $_ENV['DB_PORT'] . ';charset=utf8mb4',
-        $_ENV['DB_USERNAME'],
-        $_ENV['DB_PASSWORD']
+        'mysql:host=' . $_ENV['MYSQL_HOST'] . ';dbname=' . $_ENV['MYSQL_NAME'] . ';port=' . $_ENV['MYSQL_PORT'] . ';charset=utf8mb4',
+        $_ENV['MYSQL_USERNAME'],
+        $_ENV['MYSQL_PASSWORD']
     );
 } catch (PDOException $e) {
     die("Erreur de connexion : " . $e->getMessage());
