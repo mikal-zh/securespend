@@ -19,9 +19,9 @@ services:
             MYSQL_USER: admin_secure
             MYSQL_PASSWORD: g
             MYSQL_DATABASE: securespend
-            OIDC_ISSUER_URL: https://ariovisdemo.cloud-iam.com/realms/securespend
-            OIDC_CLIENT_ID: securespend
-            OIDC_CLIENT_SECRET: lg9rprkpqRYsB2HMrAxyRGiCPl43XBnj
+            OIDC_ISSUER_URL: your-issuer-url
+            OIDC_CLIENT_ID: your-client-id
+            OIDC_CLIENT_SECRET: your-secret
     mysqldb:
         image: mysql
         container_name: mysql

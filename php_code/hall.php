@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (!isset($_SESSION['access_token'])) {
     echo 'Accès non autorisé. Veuillez vous authentifier ';
@@ -60,13 +62,13 @@ $canValider = in_array('role_admin', $roles);
             if ($canSaisir) {
                 echo '<a href="utilisateur.php" class="button-link">SAISIR</a>';
             } else {
-                echo '<p>Vous n\'avez pas accès à SAISIR.</p>';
+                echo '<p style="color:white">Vous n\'avez pas accès à SAISIR.</p>';
             }
             echo '<br>';
             if ($canValider) {
                 echo '<a href="management.php" class="button-link">VALIDER</a>';
             } else {
-                echo '<p>Vous n\'avez pas accès à VALIDER.</p>';
+                echo '<p style="color:white">Vous n\'avez pas accès à VALIDER.</p>';
             }
             ?>
         </center>
