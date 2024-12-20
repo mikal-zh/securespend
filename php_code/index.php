@@ -6,7 +6,7 @@ use Dotenv\Dotenv;
 
 // Load .env file
 $dotenv = Dotenv::createImmutable(__DIR__);
-// $dotenv->load();
+$dotenv->load();
 
 $oidc = new OpenIDConnectClient(
     provider_url: $_ENV['OIDC_ISSUER_URL'], // Remplace par ton domaine Keycloak et le nom de ton Realm
