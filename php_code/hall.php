@@ -39,10 +39,10 @@ $canValider = in_array('role_admin', $roles);
     <div class="top">
         <header>
             <div class="toprightlogo">
-                <img src="user.png" alt="logo ariovis" height="50">
+                <img src="user.png" alt="logo securespend" height="50">
             </div>
             <div class="logotopleft">
-                <img src="logo.png" alt="logo ariovis" width="50" height="50">
+                <img src="logo.png" alt="logo securespend" width="50" height="50">
             </div>
             <div class="placetopleft">
                 <h1>accueil</h1>

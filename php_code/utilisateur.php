@@ -65,7 +65,7 @@ $dbh = null;
     <div class="top">
         <header>
             <div class="logotopleft">
-                <img src="logo.png" alt="logo ariovis" width="50" height="50">
+                <img src="logo.png" alt="logo securespend" width="50" height="50">
             </div>
             <div class="placetopleft">
                 <h1>Utilisateur</h1>
@@ -79,7 +79,7 @@ $dbh = null;
         Rôles: <?php echo implode(', ', $roles); // Affiche les rôles de l'utilisateur ?>
     </div>
     <div class="toprightlogo">
-        <img src="user.png" alt="logo ariovis" height="50">
+        <img src="user.png" alt="logo securespend" height="50">
     </div>
 <a href="hall.php" class="button-link">accueil</a>
 <a href="./add_note.php" class="button-link">Ajouter une note de frais</a>
